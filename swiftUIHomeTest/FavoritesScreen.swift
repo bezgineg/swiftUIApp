@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct FavoritesScreen: View {
+    @State private var showModal = false
+    
     var body: some View {
-        Text("FavoritesScreen")
+        VStack {
+            Text("Favorites")
+            Button("Show modal") {
+                showModal.toggle()
+                print(showModal)
+            }
+            .padding()
+            .foregroundColor(.white)
+            .background(.black)
+            .cornerRadius(12)
+        }
+        .sheet(
+            isPresented: $showModal,
+            onDismiss: {
+                print(showModal)
+            }
+        ) {
+            Text("This is Modal view")
+                .foregroundColor(.green)
+        }
     }
 }
 
