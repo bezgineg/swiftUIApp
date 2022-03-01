@@ -9,16 +9,19 @@ import SwiftUI
 
 struct News: Hashable {
     let name: String
+    let tag: Int
 }
 
 struct FeedScreen: View {
     private var news = [
-        News(name: "First news"),
-        News(name: "Second news"),
-        News(name: "Third news"),
-        News(name: "Fourth news"),
-        News(name: "Fifth news")
+        News(name: "First news", tag: 0),
+        News(name: "Second news", tag: 1),
+        News(name: "Third news", tag: 2),
+        News(name: "Fourth news", tag: 3),
+        News(name: "Fifth news", tag: 4)
     ]
+    
+    @EnvironmentObject var profileViewModel: ProfileViewModel
     
     var body: some View {
         NavigationView {
@@ -26,19 +29,16 @@ struct FeedScreen: View {
                 ForEach(news, id: \.self) { news in
                     NavigationLink(
                         destination: Text(news.name),
+                        tag: news.tag,
+                        selection: $profileViewModel.currentLink,
                         label: {
                             Text(news.name)
                         }
                     )
                 }
             }
+            .navigationTitle("Feed")
         }
-        .navigationTitle("Feed")
-    }
-}
-
-struct FeedScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedScreen()
+        .navigationViewStyle(.stack)
     }
 }

@@ -35,9 +35,3 @@ struct FavoritesScreen: View {
         }
     }
 }
-
-struct FavoritesScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        FavoritesScreen()
-    }
-}

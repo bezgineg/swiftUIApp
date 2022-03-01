@@ -12,6 +12,7 @@ struct swiftUIHomeTestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ProfileViewModel())
         }
     }
 }

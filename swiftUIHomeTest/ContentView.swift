@@ -10,10 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selection = 0
+    @State private var linkTag: Int? = 0
     
     var body: some View {
         TabView(selection: $selection) {
-            ProfileScreen()
+            ProfileScreen(selection: $selection)
                 .tabItem {
                     Image(systemName: "newspaper.fill")
                     Text("Profile")
