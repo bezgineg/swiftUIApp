@@ -61,8 +61,8 @@
 				7EF2A5AC27CE0C79006B408C /* ContentView.swift */,
 				7EF2A5AE27CE0C7F006B408C /* Assets.xcassets */,
 				7EF2A5B027CE0C7F006B408C /* Preview Content */,
-				7EF2A5B827CE0E3B006B408C /* FeedScreen.swift */,
 				7EF2A5BA27CE0E48006B408C /* ProfileScreen.swift */,
+				7EF2A5B827CE0E3B006B408C /* FeedScreen.swift */,
 				7EF2A5BC27CE0E5A006B408C /* FavoritesScreen.swift */,
 			);
 			path = swiftUIHomeTest;

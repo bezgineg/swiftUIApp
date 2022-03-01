@@ -13,24 +13,24 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            FeedScreen()
-                .tabItem {
-                    Image(systemName: "newspaper.fill")
-                    Text("Feed")
-                }
-                .tag(0)
             ProfileScreen()
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "newspaper.fill")
                     Text("Profile")
                 }
                 .tag(0)
+            FeedScreen()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Feed")
+                }
+                .tag(1)
             FavoritesScreen()
                 .tabItem {
                     Image(systemName: "star.fill")
                     Text("Favorites")
                 }
-                .tag(0)
+                .tag(2)
         }
     }
 }
