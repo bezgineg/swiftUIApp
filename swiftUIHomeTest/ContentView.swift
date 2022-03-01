@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+final class ProfileViewModel: ObservableObject {
+    @Published var currentLink: Int? = nil
+}
+
 struct ContentView: View {
     
     @State private var selection = 0

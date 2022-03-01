@@ -32,6 +32,18 @@ struct FavoritesScreen: View {
         ) {
             Text("This is Modal view")
                 .foregroundColor(.green)
+            ActivityIndicator()
         }
+    }
+}
+
+struct ActivityIndicator: UIViewRepresentable {
+
+    public func makeUIView(context: Context) -> UIActivityIndicatorView {
+        UIActivityIndicatorView(style: .large)
+    }
+
+    public func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {
+        uiView.startAnimating()
     }
 }

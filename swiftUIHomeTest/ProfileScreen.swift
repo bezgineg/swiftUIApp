@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-final class ProfileViewModel: ObservableObject {
-    
-    @Published var currentLink: Int? = nil
-}
-
 struct ProfileScreen: View {
     
     @Binding var selection: Int
