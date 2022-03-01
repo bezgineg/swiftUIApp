@@ -9,10 +9,11 @@ import SwiftUI
 
 struct FavoritesScreen: View {
     @State private var showModal = false
+    @State private var screenText = "Favorites"
     
     var body: some View {
         VStack {
-            Text("Favorites")
+            Text(screenText)
             Button("Show modal") {
                 showModal.toggle()
                 print(showModal)
@@ -25,6 +26,7 @@ struct FavoritesScreen: View {
         .sheet(
             isPresented: $showModal,
             onDismiss: {
+                screenText = "Modal view dismissed"
                 print(showModal)
             }
         ) {
